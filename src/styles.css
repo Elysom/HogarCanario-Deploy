@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'CANIS';
+    src: url(assets/CANIS-MAJOR.ttf) format('truetype');
+}
+h1 {
+    font-family: 'CANIS';
+    font-weight: 900;
+    font-size: 3rem;
+    color: #ff0606;
+    text-align: center;
+    margin-top: 2rem;
+}
