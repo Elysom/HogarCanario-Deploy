@@ -18,7 +18,7 @@ export class YoutubeService {
   fetchVideoData(): void {
     this.http.get<Welcome>(`https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${this.videoId}&key=YOUR_API_KEY`)
       .subscribe(response => {
-        this.itemvideo = response.items[0]; // Assuming you get a valid response
+        this.itemvideo.push(response.items[0]); 
       });
   }
 }

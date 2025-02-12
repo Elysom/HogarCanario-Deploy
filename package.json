@@ -20,6 +20,8 @@
     "@angular/router": "^19.0.0",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
+    "google-auth-library": "^9.15.1",
+    "googleapis": "^144.0.0",
     "rxjs": "~7.8.0",
     "swiper": "^11.2.2",
     "tslib": "^2.3.0",

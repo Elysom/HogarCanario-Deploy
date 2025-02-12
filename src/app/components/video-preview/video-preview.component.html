@@ -1,11 +1,11 @@
 <div *ngIf="itemvideo">
     <div class="video-thumbnail">
-      <img [src]="itemvideo.snippet?.thumbnails?.medium?.url" alt="Video Thumbnail" />
+      <img [src]="itemvideo.snippet.thumbnails?.medium?.url" alt="Video Thumbnail" />
     </div>
     <div class="video-info">
-      <h2>{{ itemvideo.snippet?.title }}</h2>
-      <p>{{ itemvideo.snippet?.description }}</p>
+      <h2>{{ itemvideo.snippet.title }}</h2>
+      <p>{{ itemvideo.snippet.description }}</p>
       <p><strong>Views:</strong> {{ itemvideo.statistics?.viewCount }}</p>
     </div>
   </div>
-  
+      
