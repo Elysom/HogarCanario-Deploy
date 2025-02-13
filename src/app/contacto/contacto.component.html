@@ -1,0 +1,34 @@
+<div class="container mt-5" style="max-width: 600px;padding : 20px; border: 1px solid #ccc; border-radius: 5px;">
+    <h2 style="text-align:center">Contacto</h2>
+    <form [formGroup]="contactoForm" (ngSubmit)="enviarFormulario()">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input id="nombre" class="form-control" formControlName="nombre" (input)="contactoForm.get('nombre')?.updateValueAndValidity()">
+        <div *ngIf="contactoForm.get('nombre')?.touched || contactoForm.get('nombre')?.dirty" class="text-danger">
+          <small *ngIf="contactoForm.get('nombre')?.errors?.['required']">El nombre es obligatorio.</small>
+          <small *ngIf="contactoForm.get('nombre')?.errors?.['minlength']">El nombre debe tener al menos 3 caracteres.</small>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" type="email" class="form-control" formControlName="email" (input)="contactoForm.get('email')?.updateValueAndValidity()">
+        <div *ngIf="contactoForm.get('email')?.touched || contactoForm.get('email')?.dirty" class="text-danger">
+          <small *ngIf="contactoForm.get('email')?.errors?.['required']">El email es obligatorio.</small>
+          <small *ngIf="contactoForm.get('email')?.errors?.['email']">Ingresa un email válido.</small>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea id="mensaje" class="form-control" formControlName="mensaje" (input)="contactoForm.get('mensaje')?.updateValueAndValidity()"></textarea>
+        <div *ngIf="contactoForm.get('mensaje')?.touched || contactoForm.get('mensaje')?.dirty" class="text-danger">
+          <small *ngIf="contactoForm.get('mensaje')?.errors?.['required']">El mensaje es obligatorio.</small>
+          <small *ngIf="contactoForm.get('mensaje')?.errors?.['minlength']">El mensaje debe tener al menos 10 caracteres.</small>
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="contactoForm.invalid">Enviar</button>
+    </form>
+  </div>
+<div style="padding-bottom: 50px;"></div>
