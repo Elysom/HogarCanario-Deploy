@@ -1,0 +1,676 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>hogar-canario documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">hogar-canario documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Interfaces</li>
+  <li class="breadcrumb-item"
+  >
+  Welcome</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/interfaces/youtube.interfaces.ts</code>
+        </p>
+
+
+
+
+        <section data-compodoc="block-index">
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#etag" 
+>
+                                            etag
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#items" 
+>
+                                            items
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#kind" 
+>
+                                            kind
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#pageInfo" 
+>
+                                            pageInfo
+                                        </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section data-compodoc="block-properties">
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="etag"></a>
+                                        <span class="name "><b>etag</b>
+                                            <a href="#etag">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>etag:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="items"></a>
+                                        <span class="name "><b>items</b>
+                                            <a href="#items">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>items:     <code>Item[]</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>Item[]</code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="kind"></a>
+                                        <span class="name "><b>kind</b>
+                                            <a href="#kind">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>kind:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="pageInfo"></a>
+                                        <span class="name "><b>pageInfo</b>
+                                            <a href="#pageInfo">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>pageInfo:         <code><a href="../interfaces/PageInfo.html" target="_self" >PageInfo</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/PageInfo.html" target="_self" >PageInfo</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface Welcome {
+    kind:     string;
+    etag:     string;
+    items:    Item[];
+    pageInfo: PageInfo;
+}
+
+export interface Item {
+    kind:       string;
+    etag:       string;
+    id:         string;
+    snippet:    Snippet;
+    statistics: Statistics;
+}
+
+export interface Snippet {
+    publishedAt:          Date;
+    channelId:            string;
+    title:                string;
+    description:          string;
+    thumbnails:           Thumbnails;
+    channelTitle:         string;
+    tags:                 string[];
+    categoryId:           string;
+    liveBroadcastContent: string;
+    defaultLanguage:      string;
+    localized:            Localized;
+    defaultAudioLanguage: string;
+}
+
+export interface Localized {
+    title:       string;
+    description: string;
+}
+
+export interface Thumbnails {
+    default:  Default;
+    medium:   Default;
+    high:     Default;
+    standard: Default;
+    maxres:   Default;
+}
+
+export interface Default {
+    url:    string;
+    width:  number;
+    height: number;
+}
+
+export interface Statistics {
+    viewCount:     string;
+    likeCount:     string;
+    favoriteCount: string;
+    commentCount:  string;
+}
+
+export interface PageInfo {
+    totalResults:   number;
+    resultsPerPage: number;
+}
+
+// Converts JSON strings to/from your types
+// and asserts the results of JSON.parse at runtime
+export class Convert {
+    public static toWelcome(json: string): Welcome {
+        return cast(JSON.parse(json), r(&quot;Welcome&quot;));
+    }
+
+    public static welcomeToJson(value: Welcome): string {
+        return JSON.stringify(uncast(value, r(&quot;Welcome&quot;)), null, 2);
+    }
+}
+
+function invalidValue(typ: any, val: any, key: any, parent: any &#x3D; &#x27;&#x27;): never {
+    const prettyTyp &#x3D; prettyTypeName(typ);
+    const parentText &#x3D; parent ? &#x60; on ${parent}&#x60; : &#x27;&#x27;;
+    const keyText &#x3D; key ? &#x60; for key &quot;${key}&quot;&#x60; : &#x27;&#x27;;
+    throw Error(&#x60;Invalid value${keyText}${parentText}. Expected ${prettyTyp} but got ${JSON.stringify(val)}&#x60;);
+}
+
+function prettyTypeName(typ: any): string {
+    if (Array.isArray(typ)) {
+        if (typ.length &#x3D;&#x3D;&#x3D; 2 &amp;&amp; typ[0] &#x3D;&#x3D;&#x3D; undefined) {
+            return &#x60;an optional ${prettyTypeName(typ[1])}&#x60;;
+        } else {
+            return &#x60;one of [${typ.map(a &#x3D;&gt; { return prettyTypeName(a); }).join(&quot;, &quot;)}]&#x60;;
+        }
+    } else if (typeof typ &#x3D;&#x3D;&#x3D; &quot;object&quot; &amp;&amp; typ.literal !&#x3D;&#x3D; undefined) {
+        return typ.literal;
+    } else {
+        return typeof typ;
+    }
+}
+
+function jsonToJSProps(typ: any): any {
+    if (typ.jsonToJS &#x3D;&#x3D;&#x3D; undefined) {
+        const map: any &#x3D; {};
+        typ.props.forEach((p: any) &#x3D;&gt; map[p.json] &#x3D; { key: p.js, typ: p.typ });
+        typ.jsonToJS &#x3D; map;
+    }
+    return typ.jsonToJS;
+}
+
+function jsToJSONProps(typ: any): any {
+    if (typ.jsToJSON &#x3D;&#x3D;&#x3D; undefined) {
+        const map: any &#x3D; {};
+        typ.props.forEach((p: any) &#x3D;&gt; map[p.js] &#x3D; { key: p.json, typ: p.typ });
+        typ.jsToJSON &#x3D; map;
+    }
+    return typ.jsToJSON;
+}
+
+function transform(val: any, typ: any, getProps: any, key: any &#x3D; &#x27;&#x27;, parent: any &#x3D; &#x27;&#x27;): any {
+    function transformPrimitive(typ: string, val: any): any {
+        if (typeof typ &#x3D;&#x3D;&#x3D; typeof val) return val;
+        return invalidValue(typ, val, key, parent);
+    }
+
+    function transformUnion(typs: any[], val: any): any {
+        // val must validate against one typ in typs
+        const l &#x3D; typs.length;
+        for (let i &#x3D; 0; i &lt; l; i++) {
+            const typ &#x3D; typs[i];
+            try {
+                return transform(val, typ, getProps);
+            } catch (_) {}
+        }
+        return invalidValue(typs, val, key, parent);
+    }
+
+    function transformEnum(cases: string[], val: any): any {
+        if (cases.indexOf(val) !&#x3D;&#x3D; -1) return val;
+        return invalidValue(cases.map(a &#x3D;&gt; { return l(a); }), val, key, parent);
+    }
+
+    function transformArray(typ: any, val: any): any {
+        // val must be an array with no invalid elements
+        if (!Array.isArray(val)) return invalidValue(l(&quot;array&quot;), val, key, parent);
+        return val.map(el &#x3D;&gt; transform(el, typ, getProps));
+    }
+
+    function transformDate(val: any): any {
+        if (val &#x3D;&#x3D;&#x3D; null) {
+            return null;
+        }
+        const d &#x3D; new Date(val);
+        if (isNaN(d.valueOf())) {
+            return invalidValue(l(&quot;Date&quot;), val, key, parent);
+        }
+        return d;
+    }
+
+    function transformObject(props: { [k: string]: any }, additional: any, val: any): any {
+        if (val &#x3D;&#x3D;&#x3D; null || typeof val !&#x3D;&#x3D; &quot;object&quot; || Array.isArray(val)) {
+            return invalidValue(l(ref || &quot;object&quot;), val, key, parent);
+        }
+        const result: any &#x3D; {};
+        Object.getOwnPropertyNames(props).forEach(key &#x3D;&gt; {
+            const prop &#x3D; props[key];
+            const v &#x3D; Object.prototype.hasOwnProperty.call(val, key) ? val[key] : undefined;
+            result[prop.key] &#x3D; transform(v, prop.typ, getProps, key, ref);
+        });
+        Object.getOwnPropertyNames(val).forEach(key &#x3D;&gt; {
+            if (!Object.prototype.hasOwnProperty.call(props, key)) {
+                result[key] &#x3D; transform(val[key], additional, getProps, key, ref);
+            }
+        });
+        return result;
+    }
+
+    if (typ &#x3D;&#x3D;&#x3D; &quot;any&quot;) return val;
+    if (typ &#x3D;&#x3D;&#x3D; null) {
+        if (val &#x3D;&#x3D;&#x3D; null) return val;
+        return invalidValue(typ, val, key, parent);
+    }
+    if (typ &#x3D;&#x3D;&#x3D; false) return invalidValue(typ, val, key, parent);
+    let ref: any &#x3D; undefined;
+    while (typeof typ &#x3D;&#x3D;&#x3D; &quot;object&quot; &amp;&amp; typ.ref !&#x3D;&#x3D; undefined) {
+        ref &#x3D; typ.ref;
+        typ &#x3D; typeMap[typ.ref];
+    }
+    if (Array.isArray(typ)) return transformEnum(typ, val);
+    if (typeof typ &#x3D;&#x3D;&#x3D; &quot;object&quot;) {
+        return typ.hasOwnProperty(&quot;unionMembers&quot;) ? transformUnion(typ.unionMembers, val)
+            : typ.hasOwnProperty(&quot;arrayItems&quot;)    ? transformArray(typ.arrayItems, val)
+            : typ.hasOwnProperty(&quot;props&quot;)         ? transformObject(getProps(typ), typ.additional, val)
+            : invalidValue(typ, val, key, parent);
+    }
+    // Numbers can be parsed by Date but shouldn&#x27;t be.
+    if (typ &#x3D;&#x3D;&#x3D; Date &amp;&amp; typeof val !&#x3D;&#x3D; &quot;number&quot;) return transformDate(val);
+    return transformPrimitive(typ, val);
+}
+
+function cast&lt;T&gt;(val: any, typ: any): T {
+    return transform(val, typ, jsonToJSProps);
+}
+
+function uncast&lt;T&gt;(val: T, typ: any): any {
+    return transform(val, typ, jsToJSONProps);
+}
+
+function l(typ: any) {
+    return { literal: typ };
+}
+
+function a(typ: any) {
+    return { arrayItems: typ };
+}
+
+function u(...typs: any[]) {
+    return { unionMembers: typs };
+}
+
+function o(props: any[], additional: any) {
+    return { props, additional };
+}
+
+function m(additional: any) {
+    return { props: [], additional };
+}
+
+function r(name: string) {
+    return { ref: name };
+}
+
+const typeMap: any &#x3D; {
+    &quot;Welcome&quot;: o([
+        { json: &quot;kind&quot;, js: &quot;kind&quot;, typ: &quot;&quot; },
+        { json: &quot;etag&quot;, js: &quot;etag&quot;, typ: &quot;&quot; },
+        { json: &quot;items&quot;, js: &quot;items&quot;, typ: a(r(&quot;Item&quot;)) },
+        { json: &quot;pageInfo&quot;, js: &quot;pageInfo&quot;, typ: r(&quot;PageInfo&quot;) },
+    ], false),
+    &quot;Item&quot;: o([
+        { json: &quot;kind&quot;, js: &quot;kind&quot;, typ: &quot;&quot; },
+        { json: &quot;etag&quot;, js: &quot;etag&quot;, typ: &quot;&quot; },
+        { json: &quot;id&quot;, js: &quot;id&quot;, typ: &quot;&quot; },
+        { json: &quot;snippet&quot;, js: &quot;snippet&quot;, typ: r(&quot;Snippet&quot;) },
+        { json: &quot;statistics&quot;, js: &quot;statistics&quot;, typ: r(&quot;Statistics&quot;) },
+    ], false),
+    &quot;Snippet&quot;: o([
+        { json: &quot;publishedAt&quot;, js: &quot;publishedAt&quot;, typ: Date },
+        { json: &quot;channelId&quot;, js: &quot;channelId&quot;, typ: &quot;&quot; },
+        { json: &quot;title&quot;, js: &quot;title&quot;, typ: &quot;&quot; },
+        { json: &quot;description&quot;, js: &quot;description&quot;, typ: &quot;&quot; },
+        { json: &quot;thumbnails&quot;, js: &quot;thumbnails&quot;, typ: r(&quot;Thumbnails&quot;) },
+        { json: &quot;channelTitle&quot;, js: &quot;channelTitle&quot;, typ: &quot;&quot; },
+        { json: &quot;tags&quot;, js: &quot;tags&quot;, typ: a(&quot;&quot;) },
+        { json: &quot;categoryId&quot;, js: &quot;categoryId&quot;, typ: &quot;&quot; },
+        { json: &quot;liveBroadcastContent&quot;, js: &quot;liveBroadcastContent&quot;, typ: &quot;&quot; },
+        { json: &quot;defaultLanguage&quot;, js: &quot;defaultLanguage&quot;, typ: &quot;&quot; },
+        { json: &quot;localized&quot;, js: &quot;localized&quot;, typ: r(&quot;Localized&quot;) },
+        { json: &quot;defaultAudioLanguage&quot;, js: &quot;defaultAudioLanguage&quot;, typ: &quot;&quot; },
+    ], false),
+    &quot;Localized&quot;: o([
+        { json: &quot;title&quot;, js: &quot;title&quot;, typ: &quot;&quot; },
+        { json: &quot;description&quot;, js: &quot;description&quot;, typ: &quot;&quot; },
+    ], false),
+    &quot;Thumbnails&quot;: o([
+        { json: &quot;default&quot;, js: &quot;default&quot;, typ: r(&quot;Default&quot;) },
+        { json: &quot;medium&quot;, js: &quot;medium&quot;, typ: r(&quot;Default&quot;) },
+        { json: &quot;high&quot;, js: &quot;high&quot;, typ: r(&quot;Default&quot;) },
+        { json: &quot;standard&quot;, js: &quot;standard&quot;, typ: r(&quot;Default&quot;) },
+        { json: &quot;maxres&quot;, js: &quot;maxres&quot;, typ: r(&quot;Default&quot;) },
+    ], false),
+    &quot;Default&quot;: o([
+        { json: &quot;url&quot;, js: &quot;url&quot;, typ: &quot;&quot; },
+        { json: &quot;width&quot;, js: &quot;width&quot;, typ: 0 },
+        { json: &quot;height&quot;, js: &quot;height&quot;, typ: 0 },
+    ], false),
+    &quot;Statistics&quot;: o([
+        { json: &quot;viewCount&quot;, js: &quot;viewCount&quot;, typ: &quot;&quot; },
+        { json: &quot;likeCount&quot;, js: &quot;likeCount&quot;, typ: &quot;&quot; },
+        { json: &quot;favoriteCount&quot;, js: &quot;favoriteCount&quot;, typ: &quot;&quot; },
+        { json: &quot;commentCount&quot;, js: &quot;commentCount&quot;, typ: &quot;&quot; },
+    ], false),
+    &quot;PageInfo&quot;: o([
+        { json: &quot;totalResults&quot;, js: &quot;totalResults&quot;, typ: 0 },
+        { json: &quot;resultsPerPage&quot;, js: &quot;resultsPerPage&quot;, typ: 0 },
+    ], false),
+};
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'Welcome-1.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
