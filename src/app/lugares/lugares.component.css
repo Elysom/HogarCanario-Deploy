@@ -1,0 +1,7 @@
+.sitios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: end; /* Alinea a la derecha */
+    gap: 16px;
+  }
+  

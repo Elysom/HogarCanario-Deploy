@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 style="margin-top:50px;margin-bottom:50px">Explora Gran Canaria</h1>
+  <hr>
+  <p style="text-align: center;">Descubre los mejores sitios de Gran Canaria para conocer y rememorar un poco de lo que nos hace únicos</p>
+  <hr>
+  <label for="filtro" style="margin-right:10px">Filtrar por tipo:</label>
+  <select [(ngModel)]="filtroTipo">
+      <option value="">Todos</option>
+      <option value="Cultura">Cultura</option>
+      <option value="Naturaleza">Naturaleza</option>
+      <option value="Monumento">Monumento</option>
+  </select>
+  <input type="text" [(ngModel)]="terminoBusqueda" placeholder="Buscar sitio..." />
+  <h2>Lista de Sitios</h2>
+  <div class="sitios-container">
+    <app-sitio-card *ngFor="let sitio of sitiosFiltrados" [sitio]="sitio"></app-sitio-card>
+  </div>
+  <h2>¿No te puedes decidir?</h2>
+  <button (click)="obtenerSitioAleatorio()" class="btn btn-outline-primary" style="margin:20px">🔄 Obtener Sitio Aleatorio</button>
+  <div *ngIf="sitioAleatorio" class="random-container">
+    <h2>Sitio Aleatorio:</h2>
+    <app-sitio-card *ngIf="sitioAleatorio" [sitio]="sitioAleatorio!"></app-sitio-card>
+  </div>
+</div>

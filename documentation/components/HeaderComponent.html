@@ -222,6 +222,10 @@ export class HeaderComponent {
         &lt;a href&#x3D;&quot;/&quot;&gt;Inicio&lt;/a&gt;
       &lt;/li&gt;
       &lt;li&gt;
+        &lt;!-- Página de servicios --&gt;
+        &lt;a href&#x3D;&quot;/lugares&quot;&gt;Lugares&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
         &lt;!-- Página de información sobre la empresa --&gt;
         &lt;a href&#x3D;&quot;/about&quot;&gt;Acerca de&lt;/a&gt;
       &lt;/li&gt;
@@ -229,6 +233,7 @@ export class HeaderComponent {
         &lt;!-- Página de contacto --&gt;
         &lt;a href&#x3D;&quot;/contact&quot;&gt;Contacto&lt;/a&gt;
       &lt;/li&gt;
+
     &lt;/ul&gt;
   &lt;/nav&gt;
 &lt;/header&gt;</code></pre>
@@ -299,8 +304,8 @@ export class HeaderComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Este componente representa la cabecera de la página, que incluye el logo y la navegación principal.--><header class="header">  <!-- Contiene el logo de la página, que es un enlace a la página principal.-->  <div class="logo">    <a href="/">      <!-- Imagen del logo que redirige a la página principal.-->      <img src="images/logo.jpg" class="logo-image">    </a>  </div>    <!-- Título de la página con animación de entrada.-->  <h1 class="animate__animated animate__fadeIn">Casa de Gran Canaria    <h2>Sevilla</h2> <!-- Subtítulo asociado al nombre principal -->  </h1>    <!-- Barra de navegación con enlaces a las páginas principales. -->  <nav class="nav">    <ul>      <li>        <!-- Página principal -->        <a href="/">Inicio</a>      </li>      <li>        <!-- Página de información sobre la empresa -->        <a href="/about">Acerca de</a>      </li>      <li>        <!-- Página de contacto -->        <a href="/contact">Contacto</a>      </li>    </ul>  </nav></header></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'NoEncontradoComponent', 'selector': 'app-no-encontrado'},{'name': 'SliderfotosComponent', 'selector': 'app-sliderfotos'}];
+        var COMPONENT_TEMPLATE = '<div><!-- Este componente representa la cabecera de la página, que incluye el logo y la navegación principal.--><header class="header">  <!-- Contiene el logo de la página, que es un enlace a la página principal.-->  <div class="logo">    <a href="/">      <!-- Imagen del logo que redirige a la página principal.-->      <img src="images/logo.jpg" class="logo-image">    </a>  </div>    <!-- Título de la página con animación de entrada.-->  <h1 class="animate__animated animate__fadeIn">Casa de Gran Canaria    <h2>Sevilla</h2> <!-- Subtítulo asociado al nombre principal -->  </h1>    <!-- Barra de navegación con enlaces a las páginas principales. -->  <nav class="nav">    <ul>      <li>        <!-- Página principal -->        <a href="/">Inicio</a>      </li>      <li>        <!-- Página de servicios -->        <a href="/lugares">Lugares</a>      </li>      <li>        <!-- Página de información sobre la empresa -->        <a href="/about">Acerca de</a>      </li>      <li>        <!-- Página de contacto -->        <a href="/contact">Contacto</a>      </li>    </ul>  </nav></header></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContactoComponent', 'selector': 'app-contacto'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LugaresComponent', 'selector': 'app-lugares'},{'name': 'NoEncontradoComponent', 'selector': 'app-no-encontrado'},{'name': 'SliderfotosComponent', 'selector': 'app-sliderfotos'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
 </script>
