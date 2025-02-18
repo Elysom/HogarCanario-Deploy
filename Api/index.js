@@ -130,6 +130,12 @@ app.use(cors());
 
 app.use("/public",express.static('public'));
 
+
+// Redirigir cualquier ruta de Angular al index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Ruta con opción de límite
 app.get('/api/sitios', (req, res) => {
     let { limit } = req.query;
