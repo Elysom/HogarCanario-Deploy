@@ -131,30 +131,24 @@ app.use(cors());
 app.use("/public",express.static('public'));
 
 
-// Redirigir cualquier ruta de Angular al index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
 // Ruta con opción de límite
 app.get('/api/sitios', (req, res) => {
-    let { limit } = req.query;
-    limit = parseInt(limit);
-  
-    if (!isNaN(limit) && limit > 0) {
-      return res.json(sitiosFamosos.slice(0, limit));
-    }
-  
-    res.json(sitiosFamosos);
-  });
+  let { limit } = req.query;
+  limit = parseInt(limit);
 
+  if (!isNaN(limit) && limit > 0) {
+    return res.json(sitiosFamosos.slice(0, limit));
+  }
+
+  res.json(sitiosFamosos);
+});
 
 // Ruta para obtener un sitio aleatorio
 app.get('/api/sitios/random', (req, res) => {
-    const randomIndex = Math.floor(Math.random() * sitiosFamosos.length);
-    res.json(sitiosFamosos[randomIndex]);
-  });
-  
-  app.listen(port, () => {
-    console.log(`API corriendo en http://localhost:${port}`);
-  });
+  const randomIndex = Math.floor(Math.random() * sitiosFamosos.length);
+  res.json(sitiosFamosos[randomIndex]);
+});
+
+app.listen(port, () => {
+  console.log(`API corriendo en http://localhost:${port}`);
+});
